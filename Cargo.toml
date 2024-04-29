@@ -10,13 +10,11 @@ name = "crosvm"
 path = "src/main.rs"
 
 [profile.release]
-panic = 'abort'
 opt-level = 3
 overflow-checks = true
 
 [profile.release-test]
 inherits = 'release'
-panic = 'unwind'
 
 # Reproduces the options used when building crosvm for ChromeOS.
 [profile.chromeos]
